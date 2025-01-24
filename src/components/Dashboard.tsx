@@ -26,11 +26,11 @@ function Dashboard() {
         <section className="p-4 bg-blue-600 text-white rounded-t-xl">
           <div className="flex justify-between items-center mb-6">
             <div className="flex gap-3">
-              <User className="w-6 h-6 sm:w-7 sm:h-7" />
-              <Menu className="w-6 h-6 sm:w-7 sm:h-7" />
+              <User className="w-6 h-6 sm:w-7 sm:h-7 hidden sm:block" />
+              <Menu className="w-6 h-6 sm:w-7 sm:h-7 hidden sm:block" />
             </div>
             <div className="flex gap-3">
-              <RefreshCcw className="w-6 h-6 sm:w-7 sm:h-7" />
+              <RefreshCcw className="w-6 h-6 sm:w-7 sm:h-7 hidden sm:block" />
               <Power className="w-6 h-6 sm:w-7 sm:h-7 cursor-pointer" onClick={() => navigate('/login')} />
             </div>
           </div>
@@ -46,19 +46,19 @@ function Dashboard() {
           <div className="grid grid-cols-3 gap-4 sm:gap-6">
             <div onClick={() => navigate('/account')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
               <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
-                <History className="w-5 h-5 sm:w-6 sm:h-6" />
+                <History className="w-5 h-5 sm:w-6 sm:h-6 hidden sm:block" />
                 <span>Account</span>
               </div>
             </div>
             <div onClick={() => navigate('/earnings')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
               <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
-                <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6" />
+                <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 hidden sm:block" />
                 <span>Earnings</span>
               </div>
             </div>
             <div onClick={() => navigate('/withdraw')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
               <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
-                <Wallet className="w-5 h-5 sm:w-6 sm:h-6" />
+                <Wallet className="w-5 h-5 sm:w-6 sm:h-6 hidden sm:block" />
                 <span>Withdraw</span>
               </div>
             </div>
@@ -71,19 +71,19 @@ function Dashboard() {
           <div className="grid grid-cols-3 gap-4 sm:gap-6">
             <div onClick={() => navigate('/benfeks')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
               <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
-                <Users className="w-5 h-5 sm:w-6 sm:h-6" />
+                <Users className="w-5 h-5 sm:w-6 sm:h-6 hidden sm:block" />
                 <span>Benfeks</span>
               </div>
             </div>
             <div onClick={() => navigate('/purchases')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
               <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
-                <ShoppingCart className="w-5 h-5 sm:w-6 sm:h-6" />
+                <ShoppingCart className="w-5 h-5 sm:w-6 sm:h-6 hidden sm:block" />
                 <span>Purchases</span>
               </div>
             </div>
             <div onClick={() => navigate('/add-benfek')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
               <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
-                <UserPlus className="w-5 h-5 sm:w-6 sm:h-6" />
+                <UserPlus className="w-5 h-5 sm:w-6 sm:h-6 hidden sm:block" />
                 <span>Add benfek</span>
               </div>
             </div>
@@ -96,19 +96,19 @@ function Dashboard() {
           <div className="grid grid-cols-3 gap-4 sm:gap-6">
             <div onClick={() => navigate('/supplements')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
               <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
-                <Pill className="w-5 h-5 sm:w-6 sm:h-6" />
+                <Pill className="w-5 h-5 sm:w-6 sm:h-6 hidden sm:block" />
                 <span>Supplements</span>
               </div>
             </div>
             <div onClick={() => navigate('/articles')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
               <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
-                <Newspaper className="w-5 h-5 sm:w-6 sm:h-6" />
+                <Newspaper className="w-5 h-5 sm:w-6 sm:h-6 hidden sm:block" />
                 <span>Articles</span>
               </div>
             </div>
             <div onClick={() => navigate('/podcasts')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
               <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
-                <Mic className="w-5 h-5 sm:w-6 sm:h-6" />
+                <Mic className="w-5 h-5 sm:w-6 sm:h-6 hidden sm:block" />
                 <span>Podcasts</span>
               </div>
             </div>
