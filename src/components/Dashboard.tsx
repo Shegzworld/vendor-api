@@ -23,42 +23,42 @@ function Dashboard() {
     <div className="min-h-screen bg-gray-100 p-4 lg:p-8">
       <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-lg">
         {/* Dashboard screen */}
-        <section className="p-6 bg-blue-600 text-white rounded-t-xl">
-          <div className="flex justify-between items-center mb-8">
-            <div className="flex gap-4">
-              <User className="w-6 h-6" />
-              <Menu className="w-6 h-6" />
+        <section className="p-4 bg-blue-600 text-white rounded-t-xl">
+          <div className="flex justify-between items-center mb-6">
+            <div className="flex gap-3">
+              <User className="w-6 h-6 sm:w-7 sm:h-7" />
+              <Menu className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
-            <div className="flex gap-4">
-              <RefreshCcw className="w-6 h-6" />
-              <Power className="w-6 h-6 cursor-pointer" onClick={() => navigate('/login')}  />
+            <div className="flex gap-3">
+              <RefreshCcw className="w-6 h-6 sm:w-7 sm:h-7" />
+              <Power className="w-6 h-6 sm:w-7 sm:h-7 cursor-pointer" onClick={() => navigate('/login')} />
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-3xl font-bold mb-2">₦50,000</h1>
-            <p className="text-blue-100">Fullmoon Pharmacy</p>
+            <h1 className="text-2xl sm:text-3xl font-bold mb-1">₦50,000</h1>
+            <p className="text-blue-100 text-sm">Fullmoon Pharmacy</p>
           </div>
         </section>
 
         {/* Wallet section */}
-        <section className="p-6 border-b">
-          <h2 className="text-xl font-semibold mb-6">Wallet</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div onClick={() => navigate('/account')} className="cursor-pointer p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-              <div className="flex items-center gap-3 text-gray-700">
-                <History className="w-5 h-5" />
+        <section className="p-4 border-b">
+          <h2 className="text-lg sm:text-xl font-semibold mb-4">Wallet</h2>
+          <div className="grid grid-cols-3 gap-4 sm:gap-6">
+            <div onClick={() => navigate('/account')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+              <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
+                <History className="w-5 h-5 sm:w-6 sm:h-6" />
                 <span>Account</span>
               </div>
             </div>
-            <div onClick={() => navigate('/earnings')} className="cursor-pointer p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-              <div className="flex items-center gap-3 text-gray-700">
-                <TrendingUp className="w-5 h-5" />
+            <div onClick={() => navigate('/earnings')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+              <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
+                <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6" />
                 <span>Earnings</span>
               </div>
             </div>
-            <div onClick={() => navigate('/withdraw')} className="cursor-pointer p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-              <div className="flex items-center gap-3 text-gray-700">
-                <Wallet className="w-5 h-5" />
+            <div onClick={() => navigate('/withdraw')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+              <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
+                <Wallet className="w-5 h-5 sm:w-6 sm:h-6" />
                 <span>Withdraw</span>
               </div>
             </div>
@@ -66,24 +66,24 @@ function Dashboard() {
         </section>
 
         {/* Directory section */}
-        <section className="p-6 border-b">
-          <h2 className="text-xl font-semibold mb-6">Directory</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div onClick={() => navigate('/benfeks')} className="cursor-pointer p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-              <div className="flex items-center gap-3 text-gray-700">
-                <Users className="w-5 h-5" />
+        <section className="p-4 border-b">
+          <h2 className="text-lg sm:text-xl font-semibold mb-4">Directory</h2>
+          <div className="grid grid-cols-3 gap-4 sm:gap-6">
+            <div onClick={() => navigate('/benfeks')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+              <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
+                <Users className="w-5 h-5 sm:w-6 sm:h-6" />
                 <span>Benfeks</span>
               </div>
             </div>
-            <div onClick={() => navigate('/purchases')} className="cursor-pointer p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-              <div className="flex items-center gap-3 text-gray-700">
-                <ShoppingCart className="w-5 h-5" />
+            <div onClick={() => navigate('/purchases')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+              <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
+                <ShoppingCart className="w-5 h-5 sm:w-6 sm:h-6" />
                 <span>Purchases</span>
               </div>
             </div>
-            <div onClick={() => navigate('/add-benfek')} className="cursor-pointer p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-              <div className="flex items-center gap-3 text-gray-700">
-                <UserPlus className="w-5 h-5" />
+            <div onClick={() => navigate('/add-benfek')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+              <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
+                <UserPlus className="w-5 h-5 sm:w-6 sm:h-6" />
                 <span>Add benfek</span>
               </div>
             </div>
@@ -91,24 +91,24 @@ function Dashboard() {
         </section>
 
         {/* Publish section */}
-        <section className="p-6">
-          <h2 className="text-xl font-semibold mb-6">Publish</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div onClick={() => navigate('/supplements')} className="cursor-pointer p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-              <div className="flex items-center gap-3 text-gray-700">
-                <Pill className="w-5 h-5" />
+        <section className="p-4">
+          <h2 className="text-lg sm:text-xl font-semibold mb-4">Publish</h2>
+          <div className="grid grid-cols-3 gap-4 sm:gap-6">
+            <div onClick={() => navigate('/supplements')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+              <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
+                <Pill className="w-5 h-5 sm:w-6 sm:h-6" />
                 <span>Supplements</span>
               </div>
             </div>
-            <div onClick={() => navigate('/articles')} className="cursor-pointer p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-              <div className="flex items-center gap-3 text-gray-700">
-                <Newspaper className="w-5 h-5" />
+            <div onClick={() => navigate('/articles')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+              <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
+                <Newspaper className="w-5 h-5 sm:w-6 sm:h-6" />
                 <span>Articles</span>
               </div>
             </div>
-            <div onClick={() => navigate('/podcasts')} className="cursor-pointer p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-              <div className="flex items-center gap-3 text-gray-700">
-                <Mic className="w-5 h-5" />
+            <div onClick={() => navigate('/podcasts')} className="cursor-pointer p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+              <div className="flex items-center gap-2 sm:gap-3 text-gray-700 text-xs sm:text-sm">
+                <Mic className="w-5 h-5 sm:w-6 sm:h-6" />
                 <span>Podcasts</span>
               </div>
             </div>

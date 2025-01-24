@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Table, Button, Modal, Form, Input, InputNumber, notification } from 'antd';
@@ -42,7 +42,7 @@ const Purchases = () => {
     setIsModalVisible(false);
   };
 
-  const handleSubmit = (values: any) => {
+  const handleSubmit = (values:any) => {
     const newPurchase = {
       key: purchases.length + 1,
       drugName: values.drugName,
