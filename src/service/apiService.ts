@@ -6,7 +6,7 @@ export const apiBaseUrl = "http://localhost:8000/api";
 const axiosInstance = axios.create({
   baseURL: apiBaseUrl,
   headers: {
-    "Content-Type": "application/json",
+    "Content-Type": "application/json", // Default content type
   },
 });
 
@@ -14,7 +14,7 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   (config) => {
     // Get the token from localStorage or another secure storage
-    const token = localStorage.getItem("authToken"); 
+    const token = localStorage.getItem("authToken");
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -27,9 +27,7 @@ axiosInstance.interceptors.request.use(
 
 // Response interceptor to handle errors globally
 axiosInstance.interceptors.response.use(
-  (response) => {
-    return response;
-  },
+  (response) => response,
   (error) => {
     // Handle token expiration or unauthorized errors
     if (error.response?.status === 401) {
@@ -43,10 +41,17 @@ axiosInstance.interceptors.response.use(
 
 // Utility functions for API calls
 export const api = {
-  get: (url: string, params?: object) => axiosInstance.get(url, { params }),
-  post: (url: string, data?: object) => axiosInstance.post(url, data),
-  put: (url: string, data?: object) => axiosInstance.put(url, data),
-  delete: (url: string) => axiosInstance.delete(url),
+  get: (url: string, params?: object, headers?: object) =>
+    axiosInstance.get(url, { params, headers }),
+
+  post: (url: string, data?: object, headers?: object) =>
+    axiosInstance.post(url, data, { headers }),
+
+  put: (url: string, data?: object, headers?: object) =>
+    axiosInstance.put(url, data, { headers }),
+
+  delete: (url: string, headers?: object) =>
+    axiosInstance.delete(url, { headers }),
 };
 
 export default axiosInstance;

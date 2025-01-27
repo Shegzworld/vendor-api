@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Button, Table, Input, Modal, notification } from 'antd';
@@ -76,9 +76,7 @@ const Withdraw = () => {
             <p className="text-xl text-gray-900">₦{walletBalance}</p>
           </div>
 
-          <Button type="primary" className="mr-4" onClick={() => handleModalOpen('deposit')}>
-            Add Funds
-          </Button>
+          
           <Button type="primary" danger onClick={() => handleModalOpen('withdraw')}>
             Withdraw Funds
           </Button>

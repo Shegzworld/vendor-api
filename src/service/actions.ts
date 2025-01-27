@@ -5,10 +5,10 @@ class Endpoint {
   private apiBaseUrl = apiBaseUrl;
 
   // Method to log in a user
-  public async loginUser(email: string, password: string): Promise<void> {
+  public async loginUser(username: string, password: string): Promise<void> {
     try {
-      const response = await axios.post(`${this.apiBaseUrl}/auth/login`, {
-        email,
+      const response = await axios.post(`${apiBaseUrl}/auth/login`, {
+        username,
         password,
       });
 
@@ -30,23 +30,25 @@ class Endpoint {
   // Method to register a new user
   public async registerUser(
     username: string,
-    email: string,
     password: string,
     role: string,
     name: string,
-    phone: string,
-    address: string
+    address: string,
+    phone:string
+
   ): Promise<void> {
     try {
-      const response = await axios.post(`${this.apiBaseUrl}/customers/`, {
-        username,
-        email,
-        password,
-        role,
-        name,
-        phone,
-        address,
-      });
+      const response = await axios.post(
+        `${this.apiBaseUrl}/auth/register`,
+        {
+          username,
+          password,
+          role,
+          name,
+          phone,
+          address,
+        }
+      );
 
       return response.data;
     } catch (error) {
